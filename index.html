@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiveLife — Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .experiment-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+        }
+        
+        .faq-item h3 {
+            color: #f5576c;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .faq-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        
+        .contact-box h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .contact-info span {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .badge {
+            background: #28a745;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        
+        .warning-badge {
+            background: #ffc107;
+            color: #333;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .app-store-button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 0.9em;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .version-badge {
+            background: #e0e0e0;
+            color: #666;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .note-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .note-box p {
+            color: #856404;
+            line-height: 1.6;
+        }
+        
+        .smile {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🐝 HiveLife</h1>
+                <p>Your assistant for finding places and parking</p>
+                <div class="experiment-badge">
+                    ⚡ Experimental Project
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="note-box">
+                    <p>
+                        <span class="smile">😊</span> <strong>Important:</strong> This is an experimental project created for self-learning and experimentation. This is not a commercial product. Please don't expect too much — there may be bugs, and some features might not work perfectly. But I tried my best!
+                    </p>
+                </div>
+                
+                <div class="section">
+                    <h2>📱 About the App</h2>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+                        HiveLife is a convenient assistant for finding restaurants, cafes, shops, parking lots, and attractions near you. The app uses Apple Maps data and is completely free.
+                    </p>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+                        <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; flex: 1; min-width: 120px; text-align: center;">
+                            <div style="font-size: 2em; margin-bottom: 5px;">🍽️</div>
+                            <div style="font-weight: 600;">Restaurants</div>
+                        </div>
+                        <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; flex: 1; min-width: 120px; text-align: center;">
+                            <div style="font-size: 2em; margin-bottom: 5px;">🅿️</div>
+                            <div style="font-weight: 600;">Parking</div>
+                        </div>
+                        <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; flex: 1; min-width: 120px; text-align: center;">
+                            <div style="font-size: 2em; margin-bottom: 5px;">🏛️</div>
+                            <div style="font-weight: 600;">Museums</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>❓ Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>How does place search work?</h3>
+                        <p>The app shows places within a selected radius from your current location. You can filter results by category.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Why don't I see some places?</h3>
+                        <p>Apple Maps may not display all places in certain areas. Try increasing the search radius or selecting a different category.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I add a place to favorites?</h3>
+                        <p>Tap the heart icon next to the place name. All favorite places are saved in your profile.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I build a route?</h3>
+                        <p>Tap on any place, then select "Build Route". The app will open the route in Apple Maps.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Is the app paid?</h3>
+                        <p>No, HiveLife is completely free and does not require registration.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What data does the app collect?</h3>
+                        <p>The app only requests your current location to find places near you. This data is not shared with third parties.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Why don't the discounts match reality?</h3>
+                        <p>The app generates fake discounts to demonstrate potential functionality that may be implemented in the future.</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2>🔄 Versions</h2>
+                    <p><strong>Current Version:</strong> 1.0 <span class="version-badge">first release</span></p>
+                    <p><strong>Release Date:</strong> March 2026</p>
+                    <p><strong>Requirements:</strong> iOS 26.2 or later</p>
+                    <p><strong>Size:</strong> ~3 MB</p>
+                </div>
+              
+                
+                <div class="section">
+                    <h2>🔗 Useful Links</h2>
+                    
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://apps.apple.com/ru/app/hive-life/id6760045348" class="app-store-button" style="background: #f5576c;">📱 Open in App Store</a>
+                        
+                    </div>
+                    
+                    <p style="margin-top: 20px; color: #666;">
+                        <strong>GitHub:</strong> 
+                        <a href="https://github.com/your-account/hive-life-support" style="color: #f5576c; text-decoration: none;">
+                            https://lngermanland.github.io/hive-life-support/
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="footer">
+                    <p>© 2026 Alex Production. All rights reserved.</p>
+                    <p style="margin-top: 10px; font-size: 0.85em; color: #aaa;">
+                        HiveLife — an independent project created for educational purposes. Not affiliated with Apple Inc.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        <span style="color: #f5576c;">❤️</span> Made with love for programming
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
